@@ -92,7 +92,11 @@ jobs:
           printf '%s' "$APPSTORE_API_PRIVATE_KEY" > "$RUNNER_TEMP/AuthKey_${APPSTORE_API_KEY_ID}.p8"
           printf '%s' "$APPLE_IOS_APPSTORE_PROFILE_BASE64" | base64 -D > "$PROFILE_SRC"
 
-          openssl pkcs12 -in "$CERT_PATH" -noout -passin "pass:$APPLE_CERTIFICATES_P12_PASSWORD"
+          openssl pkcs12 \
+            -legacy \
+            -in "$CERT_PATH" \
+            -noout \
+            -passin "pass:$APPLE_CERTIFICATES_P12_PASSWORD"
 
           security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
           security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
