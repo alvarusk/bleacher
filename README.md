@@ -1,6 +1,6 @@
 # Bleacher
 
-Bleacher es una app nativa para iPad pensada para borrar zonas de PDFs con una experiencia directa, similar a usar una goma sobre el documento.
+Bleacher es una app nativa para iPad pensada para borrar zonas de PDF con una experiencia directa, similar a usar una goma sobre el documento.
 
 ## Estado inicial
 
